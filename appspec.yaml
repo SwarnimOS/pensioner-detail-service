@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-south-1:860061945305:task-definition/pms-pensionerDetail-service-SP:10"
+        LoadBalancerInfo:
+          ContainerName: "pms-pensionerDetail-service-SP"
+          ContainerPort: "8081"
+        PlatformVersion: "LATEST"
